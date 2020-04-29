@@ -1,0 +1,21 @@
+{
+  "name": "JS Script Runner",
+  "version": "1.0",
+  "description": "Build an Extension with a JS script runner!",
+  "permissions": ["storage"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+  "manifest_version": 2,
+  "browser_action": {
+    "default_title": "Open the JS script runner"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "all_frames": true
+    }
+  ]
+}
