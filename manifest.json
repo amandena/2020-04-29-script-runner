@@ -2,13 +2,14 @@
   "name": "JS Script Runner",
   "version": "1.0",
   "description": "Build an Extension with a JS script runner!",
-  "permissions": ["storage"],
+  "permissions": ["storage", "declarativeContent", "activeTab"],
     "background": {
       "scripts": ["background.js"],
       "persistent": false
     },
   "manifest_version": 2,
-  "browser_action": {
+  "page_action": {
+    "default_popup": "popup.html",
     "default_title": "Open the JS script runner"
   },
   "content_scripts": [
